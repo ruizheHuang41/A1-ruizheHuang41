@@ -1,0 +1,12 @@
+# Compiled class files
+bin/
+out/
+*.class
+
+# Editor and operating system files
+.vscode/settings.json.bak
+.DS_Store
+Thumbs.db
+
+# WakaTime keeps its own cache outside the project
+.wakatime/
