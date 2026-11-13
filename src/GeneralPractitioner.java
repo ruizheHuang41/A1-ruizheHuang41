@@ -10,11 +10,9 @@ import java.time.DayOfWeek;
  */
 public class GeneralPractitioner extends HealthProfessional {
 
-    // the consultation room where this general practitioner sees patients
-    private String assignedConsultationRoom;
+    private String assignedConsultationRoom; // the consultation room where this general practitioner works
 
-    // true when the general practitioner still accepts new patients
-    private boolean acceptsNewPatients;
+    private boolean acceptsNewPatients; // true when the general practitioner still accepts new patients
 
     /**
      * Creates a general practitioner with all of the information.

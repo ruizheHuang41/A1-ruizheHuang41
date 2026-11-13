@@ -10,11 +10,9 @@ import java.time.DayOfWeek;
  */
 public class Nurse extends HealthProfessional {
 
-    // the ward where this nurse works, for example "Ward B"
-    private String assignedWard;
+    private String assignedWard; // the ward where this nurse works, for example "Ward B"
 
-    // the name of the shift of this nurse, for example "Morning shift"
-    private String shiftName;
+    private String shiftName; // the name of the shift of this nurse, for example "Morning shift"
 
     /**
      * Creates a nurse with all of the information.

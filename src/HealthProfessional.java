@@ -14,14 +14,11 @@ import java.util.Locale;
  */
 public abstract class HealthProfessional {
 
-    // the identifier of the health professional, which stores digits only
-    private String healthProfessionalIdentifier;
+    private String healthProfessionalIdentifier; // the identifier of the health professional, which stores digits only
 
-    // the full name of the health professional
-    private String healthProfessionalName;
+    private String healthProfessionalName; // the full name of the health professional
 
-    // the days of the week on which the health professional works
-    private DayOfWeek[] availableWorkingDays;
+    private DayOfWeek[] availableWorkingDays; // the days of the week on which the health professional works
 
     /**
      * Creates a health professional with all of the shared information.
@@ -214,6 +211,7 @@ public abstract class HealthProfessional {
         if (cleanedIdentifier.length() == 0) {
             throw new IllegalArgumentException("The health professional identifier cannot be empty.");
         }
+        // index goes through every character of the identifier
         for (int index = 0; index < cleanedIdentifier.length(); index++) {
             char currentCharacter = cleanedIdentifier.charAt(index); // one character of the identifier
             if (Character.isDigit(currentCharacter) == false) {
@@ -258,6 +256,7 @@ public abstract class HealthProfessional {
                 throw new IllegalArgumentException("A working day cannot be empty.");
             }
             copiedWorkingDays[index] = workingDaysToCheck[index];
+            // earlierIndex looks at every working day that was stored before this one
             for (int earlierIndex = 0; earlierIndex < index; earlierIndex++) {
                 if (copiedWorkingDays[earlierIndex] == workingDaysToCheck[index]) {
                     throw new IllegalArgumentException("A working day cannot appear twice.");

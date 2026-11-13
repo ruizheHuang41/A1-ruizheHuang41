@@ -8,17 +8,13 @@
  */
 public class Patient {
 
-    // the smallest number of characters that a patient name can have
-    private static final int MINIMUM_NAME_LENGTH = 2;
+    private static final int MINIMUM_NAME_LENGTH = 2; // the smallest number of characters of a patient name
 
-    // the exact number of digits in a mobile phone number
-    private static final int PHONE_NUMBER_LENGTH = 10;
+    private static final int PHONE_NUMBER_LENGTH = 10; // the exact number of digits of a phone number
 
-    // the full name of the patient
-    private String patientName;
+    private String patientName; // the full name of the patient
 
-    // the mobile phone number of the patient, which stores exactly ten digits
-    private String mobilePhoneNumber;
+    private String mobilePhoneNumber; // the mobile phone number of the patient, which stores ten digits
 
     /**
      * Creates a patient after the name and the phone number are checked.
@@ -88,10 +84,11 @@ public class Patient {
             throw new IllegalArgumentException("The patient name needs at least "
                     + MINIMUM_NAME_LENGTH + " characters.");
         }
+        // index goes through every character of the name
         for (int index = 0; index < cleanedName.length(); index++) {
             char currentCharacter = cleanedName.charAt(index); // one character of the patient name
-            boolean characterIsLetterOrSpace = Character.isLetter(currentCharacter) || currentCharacter == ' ';
-            boolean characterIsNamePunctuation = currentCharacter == '-' || currentCharacter == '\'';
+            boolean characterIsLetterOrSpace = Character.isLetter(currentCharacter) || currentCharacter == ' '; // true for a letter or a space
+            boolean characterIsNamePunctuation = currentCharacter == '-' || currentCharacter == '\''; // true for a hyphen or an apostrophe
             if (characterIsLetterOrSpace == false && characterIsNamePunctuation == false) {
                 throw new IllegalArgumentException("The patient name can only contain letters, spaces, '-' and '''.");
             }
@@ -115,6 +112,7 @@ public class Patient {
             throw new IllegalArgumentException("The mobile phone number must contain exactly "
                     + PHONE_NUMBER_LENGTH + " digits.");
         }
+        // index goes through every digit of the phone number
         for (int index = 0; index < cleanedNumber.length(); index++) {
             char currentCharacter = cleanedNumber.charAt(index); // one digit of the phone number
             if (Character.isDigit(currentCharacter) == false) {

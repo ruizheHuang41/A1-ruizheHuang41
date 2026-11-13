@@ -83,6 +83,7 @@ public class AssignmentOne {
         System.out.println("The clinic keeps all four specialties in one ArrayList of HealthProfessional.");
         System.out.println("Each object prints its own details, because toString is overridden.");
         System.out.println();
+        // index goes through every health professional of the clinic
         for (int index = 0; index < healthProfessionalList.size(); index++) {
             HealthProfessional currentProfessional = healthProfessionalList.get(index); // one professional from the clinic
             System.out.println((index + 1) + ") " + currentProfessional);

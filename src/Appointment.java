@@ -13,17 +13,13 @@ import java.time.LocalTime;
  */
 public class Appointment implements Comparable<Appointment> {
 
-    // the patient who booked this appointment
-    private Patient appointmentPatient;
+    private Patient appointmentPatient; // the patient who booked this appointment
 
-    // the health professional who will see the patient
-    private HealthProfessional appointmentHealthProfessional;
+    private HealthProfessional appointmentHealthProfessional; // the health professional who will see the patient
 
-    // the time slot of this appointment, for example 09:30
-    private LocalTime appointmentTime;
+    private LocalTime appointmentTime; // the time slot of this appointment, for example 09:30
 
-    // the day of this appointment, which is always the current day
-    private LocalDate appointmentDate;
+    private LocalDate appointmentDate; // the day of this appointment, which is always the current day
 
     /**
      * Creates an appointment after every detail is checked. The date is filled in

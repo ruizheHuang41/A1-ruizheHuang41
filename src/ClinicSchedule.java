@@ -13,14 +13,11 @@ import java.util.ArrayList;
  */
 public class ClinicSchedule {
 
-    // the time when the clinic opens in the morning
-    private static final LocalTime OPENING_TIME = LocalTime.of(8, 0);
+    private static final LocalTime OPENING_TIME = LocalTime.of(8, 0); // the time when the clinic opens
 
-    // the time when the clinic closes in the afternoon
-    private static final LocalTime CLOSING_TIME = LocalTime.of(16, 0);
+    private static final LocalTime CLOSING_TIME = LocalTime.of(16, 0); // the time when the clinic closes
 
-    // the length of one appointment slot measured in minutes
-    private static final int SLOT_LENGTH_IN_MINUTES = 30;
+    private static final int SLOT_LENGTH_IN_MINUTES = 30; // the length of one appointment slot in minutes
 
     /**
      * This private constructor stops other classes from creating a

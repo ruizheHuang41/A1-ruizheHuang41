@@ -21,21 +21,15 @@ public class RandomBookingGenerator {
     private static final String[] LAST_NAME_LIST = { "Adams", "Brooks", "Clark", "Diaz", "Evans",
             "Foster", "Green", "Harris" };
 
-    // the number that the random generator works with when it builds a phone number
-    private static final int LARGEST_PHONE_NUMBER_PART = 100000000;
+    private static final int LARGEST_PHONE_NUMBER_PART = 100000000; // the size of the random phone number part
 
-    // how many tries are allowed for every random appointment
-    private static final int ATTEMPTS_PER_APPOINTMENT = 20;
+    private static final int ATTEMPTS_PER_APPOINTMENT = 20; // how many tries are allowed for every appointment
 
-    // the random number generator, which uses a fixed seed so the demonstration
-    // prints the same result every time it is started
-    private Random randomGenerator;
+    private Random randomGenerator; // the random generator, which uses a fixed seed for a repeatable demonstration
 
-    // the manager that receives the random appointments
-    private AppointmentManager appointmentManager;
+    private AppointmentManager appointmentManager; // the manager that receives the random appointments
 
-    // the phone numbers that are already used, so random patients stay different
-    private ArrayList<String> usedPhoneNumbers;
+    private ArrayList<String> usedPhoneNumbers; // the phone numbers that random patients already use
 
     /**
      * Creates the generator for one appointment manager.

@@ -15,14 +15,11 @@ import java.util.Scanner;
  */
 public class HospitalBookingConsole {
 
-    // how many time slots are printed on one line
-    private static final int TIME_SLOTS_PER_OUTPUT_LINE = 4;
+    private static final int TIME_SLOTS_PER_OUTPUT_LINE = 4; // how many time slots are printed on one line
 
-    // reads the text that the person types into the console
-    private Scanner inputScanner;
+    private Scanner inputScanner; // reads the text that the person types into the console
 
-    // the appointment manager that stores every booking
-    private AppointmentManager appointmentManager;
+    private AppointmentManager appointmentManager; // the appointment manager that stores every booking
 
     /**
      * Creates the console for one appointment manager.
@@ -108,6 +105,7 @@ public class HospitalBookingConsole {
     private void displayAllHealthProfessionals() {
         ArrayList<HealthProfessional> professionalList = appointmentManager.getHealthProfessionalList(); // every professional of the clinic
         System.out.println("Health professionals of the clinic:");
+        // index goes through every health professional of the clinic
         for (int index = 0; index < professionalList.size(); index++) {
             HealthProfessional currentProfessional = professionalList.get(index); // one professional from the clinic
             System.out.println((index + 1) + ") " + currentProfessional.getHealthProfessionalName()
@@ -133,7 +131,7 @@ public class HospitalBookingConsole {
         System.out.println("Booking a new appointment");
         ArrayList<HealthProfessional> professionalList = appointmentManager.getHealthProfessionalList(); // every professional of the clinic
         displayAllHealthProfessionals();
-        int chosenNumber = readNumber("Type the number of the health professional: ", 1, professionalList.size());
+        int chosenNumber = readNumber("Type the number of the health professional: ", 1, professionalList.size()); // the number that the person typed
         if (chosenNumber == -1) {
             System.out.println("Warning: the booking was stopped because the choice was not valid.");
             return;
@@ -148,14 +146,14 @@ public class HospitalBookingConsole {
             return;
         }
         printTimeSlots(freeSlotList, "Free time slots of " + chosenProfessional.getHealthProfessionalName());
-        int chosenSlotNumber = readNumber("Type the number of the time slot: ", 1, freeSlotList.size());
+        int chosenSlotNumber = readNumber("Type the number of the time slot: ", 1, freeSlotList.size()); // the number of the chosen time slot
         if (chosenSlotNumber == -1) {
             System.out.println("Warning: the booking was stopped because the time slot was not valid.");
             return;
         }
         LocalTime chosenTime = freeSlotList.get(chosenSlotNumber - 1); // the time slot that was chosen
-        String patientName = readText("Type the full name of the patient: ");
-        String phoneNumber = readText("Type the mobile phone number of the patient: ");
+        String patientName = readText("Type the full name of the patient: "); // the name that the person typed
+        String phoneNumber = readText("Type the mobile phone number of the patient: "); // the phone number that the person typed
         if (patientName == null || phoneNumber == null) {
             System.out.println("Warning: the booking was stopped because the patient details are missing.");
             return;
@@ -178,7 +176,7 @@ public class HospitalBookingConsole {
         System.out.println();
         ArrayList<HealthProfessional> professionalList = appointmentManager.getHealthProfessionalList(); // every professional of the clinic
         displayAllHealthProfessionals();
-        int chosenNumber = readNumber("Type the number of the health professional: ", 1, professionalList.size());
+        int chosenNumber = readNumber("Type the number of the health professional: ", 1, professionalList.size()); // the number that the person typed
         if (chosenNumber == -1) {
             System.out.println("Warning: the choice was not valid.");
             return;
@@ -201,7 +199,7 @@ public class HospitalBookingConsole {
      */
     private void displayAppointmentsByPhoneNumber() {
         System.out.println();
-        String phoneNumber = readText("Type the mobile phone number of the patient: ");
+        String phoneNumber = readText("Type the mobile phone number of the patient: "); // the phone number that the person typed
         if (phoneNumber == null) {
             System.out.println("Warning: the phone number is missing.");
             return;
@@ -224,13 +222,13 @@ public class HospitalBookingConsole {
         System.out.println();
         ArrayList<HealthProfessional> professionalList = appointmentManager.getHealthProfessionalList(); // every professional of the clinic
         displayAllHealthProfessionals();
-        int chosenNumber = readNumber("Type the number of the health professional: ", 1, professionalList.size());
+        int chosenNumber = readNumber("Type the number of the health professional: ", 1, professionalList.size()); // the number that the person typed
         if (chosenNumber == -1) {
             System.out.println("Warning: the choice was not valid.");
             return;
         }
         HealthProfessional chosenProfessional = professionalList.get(chosenNumber - 1); // the professional that was chosen
-        String timeText = readText("Type the appointment time (for example 09:30): ");
+        String timeText = readText("Type the appointment time (for example 09:30): "); // the time text that the person typed
         if (timeText == null) {
             System.out.println("Warning: the appointment time is missing.");
             return;
@@ -252,7 +250,7 @@ public class HospitalBookingConsole {
      */
     private void cancelAppointmentsByPhoneNumber() {
         System.out.println();
-        String phoneNumber = readText("Type the mobile phone number of the patient: ");
+        String phoneNumber = readText("Type the mobile phone number of the patient: "); // the phone number that the person typed
         if (phoneNumber == null) {
             System.out.println("Warning: the phone number is missing.");
             return;
@@ -268,7 +266,7 @@ public class HospitalBookingConsole {
         System.out.println();
         ArrayList<HealthProfessional> professionalList = appointmentManager.getHealthProfessionalList(); // every professional of the clinic
         displayAllHealthProfessionals();
-        int chosenNumber = readNumber("Type the number of the health professional: ", 1, professionalList.size());
+        int chosenNumber = readNumber("Type the number of the health professional: ", 1, professionalList.size()); // the number that the person typed
         if (chosenNumber == -1) {
             System.out.println("Warning: the choice was not valid.");
             return;

@@ -14,23 +14,17 @@ import java.util.Collections;
  */
 public class AppointmentManager {
 
-    // the text that every successful action message starts with
-    private static final String SUCCESS_PREFIX = "Success: ";
+    private static final String SUCCESS_PREFIX = "Success: "; // the start of every successful message
 
-    // the text that every rejected action message starts with
-    private static final String WARNING_PREFIX = "Warning: ";
+    private static final String WARNING_PREFIX = "Warning: "; // the start of every warning message
 
-    // how many time slots are printed on one line
-    private static final int SLOTS_PER_OUTPUT_LINE = 6;
+    private static final int SLOTS_PER_OUTPUT_LINE = 6; // how many time slots are printed on one line
 
-    // all appointments that are booked for the current day
-    private ArrayList<Appointment> appointmentList;
+    private ArrayList<Appointment> appointmentList; // all appointments that are booked for the current day
 
-    // all health professionals who work in the clinic
-    private ArrayList<HealthProfessional> healthProfessionalList;
+    private ArrayList<HealthProfessional> healthProfessionalList; // all health professionals of the clinic
 
-    // the fixed time slots of one clinic day, for example 08:00, 08:30, 09:00
-    private ArrayList<LocalTime> dailyTimeSlots;
+    private ArrayList<LocalTime> dailyTimeSlots; // the fixed time slots of one clinic day
 
     /**
      * Creates the manager and copies the health professionals into its own list.
@@ -102,6 +96,7 @@ public class AppointmentManager {
      * @return the health professional with that identifier, or null when nobody matches
      */
     public HealthProfessional findHealthProfessionalByIdentifier(String healthProfessionalIdentifier) {
+        // index goes through every health professional of the clinic
         for (int index = 0; index < healthProfessionalList.size(); index++) {
             HealthProfessional currentProfessional = healthProfessionalList.get(index); // one professional from the clinic
             if (currentProfessional.getHealthProfessionalIdentifier().equals(healthProfessionalIdentifier)) {
@@ -167,10 +162,11 @@ public class AppointmentManager {
         if (chosenProfessional == null || appointmentTime == null) {
             return false;
         }
+        // index goes through every appointment of the clinic
         for (int index = 0; index < appointmentList.size(); index++) {
             Appointment currentAppointment = appointmentList.get(index); // one appointment from the list
-            boolean sameProfessional = currentAppointment.getAppointmentHealthProfessional().equals(chosenProfessional);
-            boolean sameTime = currentAppointment.getAppointmentTime().equals(appointmentTime);
+            boolean sameProfessional = currentAppointment.getAppointmentHealthProfessional().equals(chosenProfessional); // true when the professional matches
+            boolean sameTime = currentAppointment.getAppointmentTime().equals(appointmentTime); // true when the time matches
             if (sameProfessional == true && sameTime == true) {
                 return true;
             }
@@ -210,6 +206,7 @@ public class AppointmentManager {
         if (mobilePhoneNumber == null) {
             return foundAppointments;
         }
+        // index goes through every appointment of the clinic
         for (int index = 0; index < appointmentList.size(); index++) {
             Appointment currentAppointment = appointmentList.get(index); // one appointment from the list
             String currentPhoneNumber = currentAppointment.getAppointmentPatient().getMobilePhoneNumber(); // the phone number of this appointment
@@ -274,6 +271,7 @@ public class AppointmentManager {
             System.out.println("There are no appointments to display.");
             return;
         }
+        // index goes through every appointment that must be printed
         for (int index = 0; index < appointmentListToDisplay.size(); index++) {
             System.out.println((index + 1) + ". " + appointmentListToDisplay.get(index));
             System.out.println();
@@ -313,10 +311,11 @@ public class AppointmentManager {
         if (appointmentTime == null) {
             return WARNING_PREFIX + "the appointment time is missing.";
         }
+        // index goes through every appointment of the clinic
         for (int index = 0; index < appointmentList.size(); index++) {
             Appointment currentAppointment = appointmentList.get(index); // one appointment from the list
-            boolean sameProfessional = currentAppointment.getAppointmentHealthProfessional().equals(chosenProfessional);
-            boolean sameTime = currentAppointment.getAppointmentTime().equals(appointmentTime);
+            boolean sameProfessional = currentAppointment.getAppointmentHealthProfessional().equals(chosenProfessional); // true when the professional matches
+            boolean sameTime = currentAppointment.getAppointmentTime().equals(appointmentTime); // true when the time matches
             if (sameProfessional == true && sameTime == true) {
                 appointmentList.remove(index);
                 return SUCCESS_PREFIX + "the appointment at " + appointmentTime + " with "

@@ -10,11 +10,9 @@ import java.time.DayOfWeek;
  */
 public class Surgeon extends HealthProfessional {
 
-    // the area of surgery that this surgeon specialises in
-    private String surgicalSpecialty;
+    private String surgicalSpecialty; // the area of surgery that this surgeon specialises in
 
-    // the number of full years that this surgeon has worked in a hospital
-    private int yearsOfExperience;
+    private int yearsOfExperience; // the number of full years that this surgeon has worked
 
     /**
      * Creates a surgeon with all of the information.

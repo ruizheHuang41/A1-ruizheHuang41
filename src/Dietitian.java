@@ -10,11 +10,9 @@ import java.time.DayOfWeek;
  */
 public class Dietitian extends HealthProfessional {
 
-    // the health problem that the diet plans of this dietitian focus on
-    private String dietPlanFocus;
+    private String dietPlanFocus; // the health problem that the diet plans of this dietitian focus on
 
-    // true when this dietitian offers online consultations as well
-    private boolean offersOnlineConsultation;
+    private boolean offersOnlineConsultation; // true when this dietitian offers online consultations as well
 
     /**
      * Creates a dietitian with all of the information.
