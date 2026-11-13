@@ -10,3 +10,6 @@ Thumbs.db
 
 # WakaTime keeps its own cache outside the project
 .wakatime/
+
+# The submission archive is built from the project files
+A1-junzhouwang.zip
