@@ -9,7 +9,7 @@ import java.util.Locale;
  * clinic never employs a health professional who has no specialty, and every
  * specialty has to provide its own description, duty and consultation fee.
  *
- * @author Junzhou Wang
+ * @author Ruizhe Huang
  * @version 1.0
  */
 public abstract class HealthProfessional {

@@ -8,7 +8,7 @@ import java.util.Random;
  * the chosen time slot of the chosen health professional is still free, so the
  * generator never breaks the rule against double booking.
  *
- * @author Junzhou Wang
+ * @author Ruizhe Huang
  * @version 1.0
  */
 public class RandomBookingGenerator {

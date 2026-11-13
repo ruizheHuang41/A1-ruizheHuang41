@@ -9,7 +9,7 @@ import java.util.ArrayList;
  * and Part 6, and it then offers an optional interactive booking session. The
  * demonstration prints its own results, so it can be marked without any input.
  *
- * @author Junzhou Wang
+ * @author Ruizhe Huang
  * @version 1.0
  */
 public class AssignmentOne {

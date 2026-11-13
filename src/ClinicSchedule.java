@@ -8,7 +8,7 @@ import java.util.ArrayList;
  * kept in this single class, so the whole clinic can change its schedule by
  * changing these three values only.
  *
- * @author Junzhou Wang
+ * @author Ruizhe Huang
  * @version 1.0
  */
 public class ClinicSchedule {

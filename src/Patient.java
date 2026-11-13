@@ -3,7 +3,7 @@
  * The name and the mobile phone number are checked inside the constructor, so a
  * Patient object can never hold empty or strange looking information.
  *
- * @author Junzhou Wang
+ * @author Ruizhe Huang
  * @version 1.0
  */
 public class Patient {

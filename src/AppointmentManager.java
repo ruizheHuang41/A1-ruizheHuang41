@@ -9,7 +9,7 @@ import java.util.Collections;
  * action can be checked before the appointment list is changed. Every action
  * returns a message, and the message starts with "Success: " or "Warning: ".
  *
- * @author Junzhou Wang
+ * @author Ruizhe Huang
  * @version 1.0
  */
 public class AppointmentManager {

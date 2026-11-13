@@ -10,7 +10,7 @@ import java.util.Scanner;
  * cancel appointments. The class only talks to the AppointmentManager, so the
  * business rules stay in one place.
  *
- * @author Junzhou Wang
+ * @author Ruizhe Huang
  * @version 1.0
  */
 public class HospitalBookingConsole {

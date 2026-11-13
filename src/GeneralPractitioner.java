@@ -5,7 +5,7 @@ import java.time.DayOfWeek;
  * professional that most patients see. A general practitioner works in one
  * consultation room and can stop accepting new patients when the room is full.
  *
- * @author Junzhou Wang
+ * @author Ruizhe Huang
  * @version 1.0
  */
 public class GeneralPractitioner extends HealthProfessional {

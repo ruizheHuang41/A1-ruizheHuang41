@@ -5,7 +5,7 @@ import java.time.DayOfWeek;
  * A dietitian records the main focus of the diet plan and whether online
  * consultations are offered, because many patients prefer to stay at home.
  *
- * @author Junzhou Wang
+ * @author Ruizhe Huang
  * @version 1.0
  */
 public class Dietitian extends HealthProfessional {

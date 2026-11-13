@@ -8,7 +8,7 @@ import java.time.LocalTime;
  * extends HealthProfessional. The appointment date is always the current day,
  * because the clinic only accepts bookings for today.
  *
- * @author Junzhou Wang
+ * @author Ruizhe Huang
  * @version 1.0
  */
 public class Appointment implements Comparable<Appointment> {

@@ -5,7 +5,7 @@ import java.time.DayOfWeek;
  * signs of patients. A nurse works in one ward and works one shift, so both the
  * ward and the shift are stored with the normal details of the nurse.
  *
- * @author Junzhou Wang
+ * @author Ruizhe Huang
  * @version 1.0
  */
 public class Nurse extends HealthProfessional {

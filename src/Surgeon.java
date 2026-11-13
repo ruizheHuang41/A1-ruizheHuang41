@@ -5,7 +5,7 @@ import java.time.DayOfWeek;
  * theatre. A surgeon records the surgical specialty and the number of years of
  * experience, because a patient may want to know how experienced the surgeon is.
  *
- * @author Junzhou Wang
+ * @author Ruizhe Huang
  * @version 1.0
  */
 public class Surgeon extends HealthProfessional {
