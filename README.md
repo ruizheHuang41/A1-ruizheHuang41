@@ -1,4 +1,4 @@
-# A1-ruizhehuang - Health Service Appointment System
+# A1-ruizheHuang41 - Health Service Appointment System
 
 PROG2004 Object Oriented Programming, Assessment 1.
 
@@ -15,7 +15,7 @@ a real person can book and cancel appointments as well.
 ## Project structure
 
 ```text
-A1-ruizhehuang/
+A1-ruizheHuang41/
 |-- .vscode/                     VS Code settings and the run configuration
 |-- docs/
 |   |-- Design-Decisions.md      Answers to the design considerations of Parts 1-6
@@ -35,12 +35,12 @@ A1-ruizhehuang/
 |   `-- HospitalBookingConsole.java  The optional interactive menu
 |-- .wakatime-project            The project name that WakaTime records
 |-- README.md
-`-- A1-ruizhehuang.zip           The file that is uploaded to MySCU
+`-- A1-ruizheHuang41.zip           The file that is uploaded to MySCU
 ```
 
 ## How to run the program in VS Code
 
-1. Open the folder `A1-ruizhehuang` in VS Code with `File > Open Folder`.
+1. Open the folder `A1-ruizheHuang41` in VS Code with `File > Open Folder`.
 2. Open `src/AssignmentOne.java`.
 3. Press `F5`, or click the `Run` button above the `main` method.
 4. The demonstration prints to the terminal and then waits for the optional
@@ -110,13 +110,13 @@ it finishes correctly even when no input is supplied.
 
 The WakaTime extension is installed in VS Code and the API key is stored in the
 VS Code user settings. This project also has a `.wakatime-project` file, so every
-heartbeat is recorded under the project name `A1-ruizhehuang`.
+heartbeat is recorded under the project name `A1-ruizheHuang41`.
 
 Keep the folder open in VS Code while you read, edit and run the code, because
 WakaTime only records time while the editor is open on these files. To create the
 report that must be submitted, open the WakaTime dashboard, choose the project
-`A1-ruizhehuang`, set the date range to the assessment period, and export the
-report as a PNG or a PDF file named `A1-ruizhehuang-WakaTime.png`.
+`A1-ruizheHuang41`, set the date range to the assessment period, and export the
+report as a PNG or a PDF file named `A1-ruizheHuang41-WakaTime.png`.
 
 ## GitHub
 
@@ -135,9 +135,9 @@ as long as the tutor and the unit assessor are invited as collaborators.
 
 ## Submission checklist
 
-- `A1-ruizhehuang.zip` with the whole project (the zip already exists in this
+- `A1-ruizheHuang41.zip` with the whole project (the zip already exists in this
   folder, and `bin/` and the compiled class files are left out).
 - The GitHub repository link in the submission comments.
-- The WakaTime report, `A1-ruizhehuang-WakaTime.png` or `.pdf`.
+- The WakaTime report, `A1-ruizheHuang41-WakaTime.png` or `.pdf`.
 - The shareable OneDrive link to the five minute video.
 - The declaration about the use of GenAI.
